@@ -83,7 +83,7 @@ frandom.login = {
             response.name;
             data["fbUserID"] = response.id;
             data["fbUserName"] = response.name;
-            FB.api('/me/friendlist', function(response) {
+            FB.api('/me/friends', function(response) {
                 console.log(response);
                 data["fbFriends"] = [];
                 for (var i = 0; i < response.data.length; i++) {
