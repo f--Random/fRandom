@@ -1,6 +1,6 @@
 window.fbAsyncInit = function() {
     FB.init({
-        appId      : '',
+        appId      : '658218184228052',
         cookie     : true,  // enable cookies to allow the server to access the session
         xfbml      : true,  // parse social plugins on this page
         version    : 'v2.0' // use version 2.0
@@ -83,7 +83,7 @@ frandom.login = {
             response.name;
             data["fbUserID"] = response.id;
             data["fbUserName"] = response.name;
-            FB.api('/me/friends', function(response) {
+            FB.api('/me/friendlist', function(response) {
                 console.log(response);
                 data["fbFriends"] = [];
                 for (var i = 0; i < response.data.length; i++) {
